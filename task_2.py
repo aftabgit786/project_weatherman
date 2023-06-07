@@ -10,7 +10,6 @@ average_humidity = 0
 humidity_count = 0
 
 for file_value in file_values:
-    full_date = file_value[MappingIndex.date]
     average_temp = file_value[MappingIndex.average_temperature]
     humidity = file_value[MappingIndex.average_humidity]
 
