@@ -1,7 +1,7 @@
 import os
 
 
-def get_contents_of_one_file(file_content):
+def get_file_contents(file_content):
     file_values = []
     for row in file_content.split("\n")[1:-1]:
         file_values.append(row.split(","))
@@ -13,5 +13,5 @@ def read_files():
     for file_name in os.listdir("weatherfiles"):
         with open(f"weatherfiles/{file_name}", "r") as file_reader:
             file_content = file_reader.read()
-            file_values += get_contents_of_one_file(file_content)
+            file_values += get_file_contents(file_content)
     return file_values

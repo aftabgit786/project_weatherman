@@ -4,14 +4,14 @@ from utils import read_files
 
 file_values = read_files()
 
-max_temperature = None
-min_temperature = None
+maximum_temperature = None
+minimum_temperature = None
 humidity = None
-date_for_max = None
-date_for_min = None
+date_for_maximum_temperature = None
+date_for_minimum_temperature = None
 date_for_humid = None
-month_name_for_max = None
-month_name_for_min = None
+month_name_for_maximum_temperature = None
+month_name_for_minimum_temperature = None
 month_name_for_humid = None
 
 for file_value in file_values:
@@ -25,21 +25,21 @@ for file_value in file_values:
     datetime_object = datetime.strptime(full_date, "%Y-%m-%d")
     month_name = datetime_object.strftime("%B")
 
-    if min_temp.isdigit() and (min_temperature is None or int(min_temp) < min_temperature):
-        min_temperature = int(min_temp)
-        date_for_min = date
-        month_name_for_min = month_name
+    if min_temp.isdigit() and (minimum_temperature is None or int(min_temp) < minimum_temperature):
+        minimum_temperature = int(min_temp)
+        date_for_minimum_temperature = date
+        month_name_for_minimum_temperature = month_name
 
-    if max_temp.isdigit() and (max_temperature is None or int(max_temp) > max_temperature):
-        max_temperature = int(max_temp)
-        date_for_max = date
-        month_name_for_max = month_name
+    if max_temp.isdigit() and (maximum_temperature is None or int(max_temp) > maximum_temperature):
+        maximum_temperature = int(max_temp)
+        date_for_maximum_temperature = date
+        month_name_for_maximum_temperature = month_name
 
     if humid.isdigit() and (humidity is None or int(humid) > int(humidity)):
         humidity = humid
         date_for_humid = date
         month_name_for_humid = month_name
 
-print(f"Highest: {max_temperature}°C on {month_name_for_max} {date_for_max}")
-print(f"Lowest: {min_temperature}°C on {month_name_for_min} {date_for_min}")
+print(f"Highest: {maximum_temperature}°C on {month_name_for_maximum_temperature} {date_for_maximum_temperature}")
+print(f"Lowest: {minimum_temperature}°C on {month_name_for_minimum_temperature} {date_for_minimum_temperature}")
 print(f"Humidity: {humidity}% on {month_name_for_humid} {date_for_humid}")
