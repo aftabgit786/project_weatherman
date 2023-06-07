@@ -8,6 +8,7 @@ file_values = read_files(month)
 red_code = '\033[91m'
 blue_code = '\033[34m'
 reset_code = '\033[0m'
+
 for file_value in file_values:
     date = file_value[MappingIndex.date]
     sliced_date = date.split('-')[MappingIndex.sliced_date]

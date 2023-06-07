@@ -9,12 +9,6 @@ file_values = read_files(year)
 maximum_temperature = None
 minimum_temperature = None
 humidity = None
-date_for_maximum_temperature = None
-date_for_minimum_temperature = None
-date_for_humid = None
-month_name_for_maximum_temperature = None
-month_name_for_minimum_temperature = None
-month_name_for_humid = None
 
 for file_value in file_values:
     full_date = file_value[MappingIndex.date]
