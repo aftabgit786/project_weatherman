@@ -14,7 +14,7 @@ for file_value in file_values:
     average_temp = file_value[MappingIndex.average_temperature]
     humidity = file_value[MappingIndex.average_humidity]
 
-    if average_temp.isdigit():
+    if average_temp:
         if minimum_temperature is None or int(average_temp) < minimum_temperature:
             minimum_temperature = int(average_temp)
         if maximum_temperature is None or int(average_temp) > maximum_temperature:

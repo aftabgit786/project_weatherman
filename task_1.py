@@ -25,17 +25,17 @@ for file_value in file_values:
     datetime_object = datetime.strptime(full_date, "%Y-%m-%d")
     month_name = datetime_object.strftime("%B")
 
-    if min_temp.isdigit() and (minimum_temperature is None or int(min_temp) < minimum_temperature):
+    if min_temp and (minimum_temperature is None or int(min_temp) < minimum_temperature):
         minimum_temperature = int(min_temp)
         date_for_minimum_temperature = sliced_date
         month_name_for_minimum_temperature = month_name
 
-    if max_temp.isdigit() and (maximum_temperature is None or int(max_temp) > maximum_temperature):
+    if max_temp and (maximum_temperature is None or int(max_temp) > maximum_temperature):
         maximum_temperature = int(max_temp)
         date_for_maximum_temperature = sliced_date
         month_name_for_maximum_temperature = month_name
 
-    if humid.isdigit() and (humidity is None or int(humid) > int(humidity)):
+    if humid and (humidity is None or int(humid) > int(humidity)):
         humidity = humid
         date_for_humid = sliced_date
         month_name_for_humid = month_name
