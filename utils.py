@@ -8,27 +8,20 @@ def get_file_contents(file_content):
     return file_values
 
 
-def read_files_for_month(month):
+def read_files(perimeter):
     file_values = []
     for file_name in os.listdir("weatherfiles"):
         if file_name.endswith(".txt"):
             file_parts = file_name.split("_")
             file_month = file_parts[3].split(".")[0]
-            if file_month == month:
+            if file_month == perimeter:
                 with open(os.path.join("weatherfiles", file_name), "r") as file_reader:
                     file_content = file_reader.read()
                     file_values += get_file_contents(file_content)
-    return file_values
-
-
-def read_files_for_year(year):
-    file_values = []
-    for file_name in os.listdir("weatherfiles"):
-        if file_name.endswith(".txt"):
-            file_parts = file_name.split("_")
             file_year = file_parts[2]
-            if file_year == year:
+            if file_year == perimeter:
                 with open(os.path.join("weatherfiles", file_name), "r") as file_reader:
                     file_content = file_reader.read()
                     file_values += get_file_contents(file_content)
     return file_values
+

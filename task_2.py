@@ -1,9 +1,9 @@
-from utils import read_files_for_month
+from utils import read_files
 from constant import MappingIndex
 
 
 month = input('Enter month: ')
-file_values = read_files_for_month(month)
+file_values = read_files(month)
 
 maximum_temperature = None
 minimum_temperature = None
