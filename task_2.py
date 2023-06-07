@@ -1,4 +1,5 @@
 from utils import read_files
+from constant import MappingIndex
 
 
 file_values = read_files()
@@ -9,9 +10,9 @@ average_humidity = 0
 humidity_count = 0
 
 for file_value in file_values:
-    full_date = file_value[0]
-    average_temp = file_value[2]
-    humidity = file_value[8]
+    full_date = file_value[MappingIndex.date]
+    average_temp = file_value[MappingIndex.average_temperature]
+    humidity = file_value[MappingIndex.average_humidity]
 
     if average_temp.isdigit():
         if minimum_temperature is None or int(average_temp) < minimum_temperature:
