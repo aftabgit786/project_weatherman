@@ -2,6 +2,7 @@ from datetime import datetime
 from utils import read_files_for_year
 from constant import MappingIndex
 
+
 year = input("Enter year: ")
 file_values = read_files_for_year(year)
 

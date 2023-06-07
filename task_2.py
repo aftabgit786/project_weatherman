@@ -1,6 +1,7 @@
 from utils import read_files_for_month
 from constant import MappingIndex
 
+
 month = input('Enter month: ')
 file_values = read_files_for_month(month)
 
