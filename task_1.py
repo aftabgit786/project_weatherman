@@ -35,8 +35,8 @@ for file_value in file_values:
         date_for_maximum_temperature = sliced_date
         month_name_for_maximum_temperature = month_name
 
-    if humid and (humidity is None or int(humid) > int(humidity)):
-        humidity = humid
+    if humid and (humidity is None or int(humid) > humidity):
+        humidity = int(humid)
         date_for_humid = sliced_date
         month_name_for_humid = month_name
 
