@@ -1,9 +1,9 @@
 from datetime import datetime
-from utils import read_files
+from utils import read_files_for_year
 from constant import MappingIndex
 
-
-file_values = read_files()
+year = input("Enter year: ")
+file_values = read_files_for_year(year)
 
 maximum_temperature = None
 minimum_temperature = None
