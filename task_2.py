@@ -20,7 +20,7 @@ for file_value in file_values:
         if maximum_temperature is None or int(average_temp) > maximum_temperature:
             maximum_temperature = int(average_temp)
 
-    if humidity.isdigit():
+    if humidity:
         average_humidity += int(humidity)
         humidity_count += 1
 
