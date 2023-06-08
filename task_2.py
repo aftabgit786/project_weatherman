@@ -1,4 +1,5 @@
 from utils import read_files
+from utils import calculate_average_humidity
 from constant import MappingIndex
 
 
@@ -7,8 +8,7 @@ file_values = read_files(month)
 
 maximum_temperature = None
 minimum_temperature = None
-average_humidity = 0
-humidity_count = 0
+
 
 for file_value in file_values:
     average_temp = file_value[MappingIndex.average_temperature]
@@ -20,12 +20,8 @@ for file_value in file_values:
         if maximum_temperature is None or int(average_temp) > maximum_temperature:
             maximum_temperature = int(average_temp)
 
-    if humidity:
-        average_humidity += int(humidity)
-        humidity_count += 1
 
-if humidity_count > 0:
-    average_humidity /= humidity_count
+average_humidity = calculate_average_humidity(file_values)
 
 print(f"Highest Average: {maximum_temperature}°C")
 print(f"Lowest Average: {minimum_temperature}°C")
