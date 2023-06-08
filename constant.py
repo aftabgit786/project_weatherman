@@ -6,4 +6,3 @@ class MappingIndex:
     sliced_date = 2
     average_temperature = 2
     average_humidity = 8
-
