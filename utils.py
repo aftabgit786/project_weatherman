@@ -8,13 +8,13 @@ def get_file_contents(file_content):
     return file_values
 
 
-def read_files(perimeter):
+def read_files(data):
     file_values = []
     for file_name in os.listdir("weatherfiles"):
         file_parts = file_name.split("_")
         file_month = file_parts[3].split(".")[0]
         file_year = file_parts[2]
-        if file_month == perimeter or file_year == perimeter:
+        if file_month == data or file_year == data:
             with open(os.path.join("weatherfiles", file_name), "r") as file_reader:
                 file_values += get_file_contents(file_reader.read())
     return file_values
