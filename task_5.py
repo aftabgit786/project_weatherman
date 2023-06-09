@@ -16,11 +16,6 @@ month = calendar.month_abbr[casting]
 
 file_values = read_files(month, year)
 
-
-red_code = '\033[91m'
-blue_code = '\033[34m'
-reset_code = '\033[0m'
-
 for file_value in file_values:
     date = file_value[MappingIndex.DATE]
     sliced_date = date.split('-')[MappingIndex.SLICED_DATE]
@@ -28,5 +23,6 @@ for file_value in file_values:
     minimum_temperature = file_value[MappingIndex.MINIMUM_TEMPERATURE]
 
     if maximum_temperature and minimum_temperature is not None:
-        print(f"{sliced_date}{blue_code}{int(minimum_temperature) * '+'}{red_code}{int(maximum_temperature) * '+'}"
-              f"{reset_code} {minimum_temperature}C - {maximum_temperature}C")
+        print(f"{sliced_date}{MappingIndex.BLUE_COLOR_CODE}{int(minimum_temperature) * '+'}"
+              f"{MappingIndex.RED_COLOR_CODE}{int(maximum_temperature) * '+'}"
+              f"{MappingIndex.RESET_COLOR_CODE} {minimum_temperature}C - {maximum_temperature}C")

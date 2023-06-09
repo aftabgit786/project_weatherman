@@ -7,3 +7,6 @@ class MappingIndex:
     AVERAGE_TEMPERATURE = 2
     AVERAGE_HUMIDITY = 8
     WEATHER_DIR = "weatherfiles"
+    RED_COLOR_CODE = '\033[91m'
+    BLUE_COLOR_CODE = '\033[34m'
+    RESET_COLOR_CODE = '\033[0m'
