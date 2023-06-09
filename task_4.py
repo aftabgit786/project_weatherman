@@ -6,7 +6,7 @@ from constants import MappingIndex
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-c', '--date', type=str, help='Specify the year')
+parser.add_argument('-c', '--date', type=str, help="Date argument in the format 'year/month'")
 args = parser.parse_args()
 
 year, month_number = args.date.split('/')
