@@ -1,0 +1,9 @@
+class MappingIndex:
+    DATE = 0
+    MAXIMUM_TEMPERATURE = 1
+    MINIMUM_TEMPERATURE = 3
+    HUMIDITY = 7
+    SLICED_DATE = 2
+    AVERAGE_TEMPERATURE = 2
+    AVERAGE_HUMIDITY = 8
+    WEATHER_DIR = "weatherfiles"
