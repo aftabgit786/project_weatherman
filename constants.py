@@ -10,3 +10,8 @@ class MappingIndex:
     RED_COLOR_CODE = '\033[91m'
     BLUE_COLOR_CODE = '\033[34m'
     RESET_COLOR_CODE = '\033[0m'
+    INDEX_ZERO = 0
+    INDEX_ONE = 0
+    INDEX_TOW = 2
+    INDEX_THREE = 3
+    INDEX_MINUS_ONE = -1
