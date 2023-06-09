@@ -16,7 +16,6 @@ maximum_temperature = None
 minimum_temperature = None
 humidity = None
 
-
 for file_value in file_values:
     full_date = file_value[MappingIndex.DATE]
     max_temp = file_value[MappingIndex.MAXIMUM_TEMPERATURE]
