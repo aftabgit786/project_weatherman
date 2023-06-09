@@ -23,7 +23,7 @@ for file_value in file_values:
     humid = file_value[MappingIndex.HUMIDITY]
 
     split_date = full_date.split("-")
-    sliced_date = int(split_date[MappingIndex.SLICED_DATE])
+    sliced_date = int(split_date[2])
 
     datetime_object = datetime.strptime(full_date, "%Y-%m-%d")
     month_name = datetime_object.strftime("%B")

@@ -19,7 +19,7 @@ file_values = read_files(month, year)
 
 for file_value in file_values:
     date = file_value[MappingIndex.DATE]
-    sliced_date = date.split('-')[MappingIndex.SLICED_DATE]
+    sliced_date = date.split('-')[2]
     maximum_temperature = file_value[MappingIndex.MAXIMUM_TEMPERATURE]
     minimum_temperature = file_value[MappingIndex.MINIMUM_TEMPERATURE]
 
