@@ -5,13 +5,13 @@ from constants import MappingIndex
 
 def get_file_contents(file_content):
     file_values = []
-    for row in file_content.split("\n")[MappingIndex.INDEX_ONE:MappingIndex.INDEX_MINUS_ONE]:
+    for row in file_content.split("\n")[1:-1]:
         file_values.append(row.split(","))
 
     return file_values
 
 
-def read_file_for_e(year):
+def read_file_for_t1(year):
     file_values = []
     for file_name in os.listdir(MappingIndex.WEATHER_DIR):
         file_parts = file_name.split("_")
