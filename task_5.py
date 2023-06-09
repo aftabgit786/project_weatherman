@@ -10,6 +10,7 @@ parser.add_argument('-c', '--date', type=str, help='Specify the year')
 args = parser.parse_args()
 
 year, month_number = args.date.split('/')
+
 casting = int(month_number)
 month = calendar.month_abbr[casting]
 

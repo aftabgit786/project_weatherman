@@ -10,6 +10,7 @@ parser.add_argument('-a', '--date', type=str, help="Date argument in the format 
 args = parser.parse_args()
 
 year, month_number = args.date.split('/')
+
 casting = int(month_number)
 month = calendar.month_abbr[casting]
 
@@ -35,7 +36,7 @@ for file_value in file_values:
             sum_humidity += int(humidity)
             humidity_count += 1
 
-    if humidity_count > 0:
+    if humidity_count:
         average_humidity = sum_humidity / humidity_count
 
 print(f"Highest Average: {maximum_temperature}°C")
