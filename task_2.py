@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-a', '--date', type=str, help="Date argument in the format 'year/month'")
 args = parser.parse_args()
 
-year, month_number = args.date.split('/')
+year, month_number = args.date.split(MappingIndex.SLASH)
 
 casting = int(month_number)
 month = calendar.month_abbr[casting]

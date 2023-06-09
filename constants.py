@@ -15,3 +15,4 @@ class MappingIndex:
     INDEX_TOW = 2
     INDEX_THREE = 3
     INDEX_MINUS_ONE = -1
+    SLASH = '/'
