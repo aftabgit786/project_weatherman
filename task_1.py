@@ -15,12 +15,6 @@ file_values = read_file_for_t1(year)
 maximum_temperature = None
 minimum_temperature = None
 humidity = None
-month_name_for_maximum_temperature = None
-date_for_maximum_temperature = None
-month_name_for_minimum_temperature = None
-date_for_minimum_temperature = None
-month_name_for_humidity = None
-date_for_humidity = None
 
 
 for file_value in file_values:
